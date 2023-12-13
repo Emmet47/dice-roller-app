@@ -13,11 +13,11 @@ class DiceRoller extends StatefulWidget {
 }
 
 class _DiceRollerState extends State {
-  var atilanZar = 3;
+  var rolledDice = 3;
 
-  void zarAt() {
+  void diceRoll() {
     setState(() {
-      atilanZar = randomizer.nextInt(6) + 1;
+      rolledDice = randomizer.nextInt(6) + 1;
     });
   }
 
@@ -27,14 +27,14 @@ class _DiceRollerState extends State {
       mainAxisSize: MainAxisSize.min,
       children: [
         Image.asset(
-          'assets/images/dice-$atilanZar.png',
+          'assets/images/dice-$rolledDice.png',
           width: 200,
         ),
         const SizedBox(
           height: 20,
         ),
         TextButton(
-          onPressed: zarAt,
+          onPressed: diceRoll,
           style: TextButton.styleFrom(
             foregroundColor: Colors.white,
             textStyle: const TextStyle(fontSize: 28),

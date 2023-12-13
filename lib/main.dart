@@ -6,10 +6,8 @@ void main() {
     const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: GradientContainer(
-          color1: Colors.red,
-          color2: Colors.black,
-        ),
+        body:
+            GradientContainer(Color.fromARGB(255, 80, 170, 243), Colors.orange),
       ),
     ),
   );
